@@ -20,7 +20,7 @@ public class QuizService {
         scoreMap.put("Planner", 0);
         scoreMap.put("Spontaneous Spender", 0);
         scoreMap.put("Saver", 0);
-        scoreMap.put("Ris Taker", 0);
+        scoreMap.put("Risk Taker", 0);
 
         for (String answer : userAnswers) {
             switch (answer) {
