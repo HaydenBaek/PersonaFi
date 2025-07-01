@@ -2,7 +2,13 @@ package com.personafi.backend.model;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.personafi.backend.repository.QuizSubmissionRepository;
 
 @Entity
 public class QuizSubmission {
@@ -18,13 +24,16 @@ public class QuizSubmission {
 
     private String personalityType;
 
-    public QuizSubmission() {}
+    public QuizSubmission() {
+    }
 
     public QuizSubmission(LocalDateTime submittedAt, List<String> userAnswers, String personalityType) {
         this.submittedAt = submittedAt;
         this.userAnswers = userAnswers;
         this.personalityType = personalityType;
     }
+
+
 
     // Getters
     public Long getId() {

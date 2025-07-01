@@ -16,7 +16,6 @@ import com.personafi.backend.repository.QuizSubmissionRepository;
 @Service
 public class QuizService {
 
-    
     @Autowired
     private QuizSubmissionRepository submissionRepository;
 
@@ -57,7 +56,7 @@ public class QuizService {
             }
         }
 
-        //saving in the db
+        // saving in the db
         QuizSubmission submission = new QuizSubmission(
                 LocalDateTime.now(),
                 userAnswers,
@@ -155,6 +154,16 @@ public class QuizService {
                         "We couldn't determine your personality type.",
                         "Try retaking the quiz.");
         }
+    }
+
+    //to map each personality count to personality type
+    public Map<String, Long> getPersonalityTypeCounts() {
+        List<Object[]> results = submissionRepository.countByPersonalityType();
+        Map<String, Long> counts = new HashMap<>();
+        for (Object[] row : results) {
+            counts.put((String) row[0], (Long) row[1]);
+        }
+        return counts;
     }
 
 }
