@@ -17,7 +17,7 @@ import com.personafi.backend.model.PersonalityType;
 import com.personafi.backend.model.Question;
 import com.personafi.backend.service.QuizService;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://persona-fi.vercel.app")
 @RestController
 @RequestMapping("/api/quiz")
 public class QuizController {
