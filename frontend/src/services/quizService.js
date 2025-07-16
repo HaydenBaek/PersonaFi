@@ -28,7 +28,7 @@ export const submitQuizAnswers = async (userAnswers) => {
     try {
         //sending the data to the backend
         console.log('Sending this to backend:', userAnswers);
-        const response = await axios.post('https://personafi.onrender.com/api/quiz/submit', userAnswers);
+        const response = await axios.post(`${API_BASE_URL}/submit`, userAnswers);
         
         //getting back the response -> personality type of the user
         return response.data;
