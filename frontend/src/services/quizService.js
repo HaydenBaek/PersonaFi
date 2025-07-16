@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_BASE_URL = 'http://localhost:8080/api/quiz';
+const API_BASE_URL = 'https://personafi.onrender.com/api/quiz';
 
 
 //Makes a GET request to the backend
@@ -28,7 +28,7 @@ export const submitQuizAnswers = async (userAnswers) => {
     try {
         //sending the data to the backend
         console.log('Sending this to backend:', userAnswers);
-        const response = await axios.post('http://localhost:8080/api/quiz/submit', userAnswers);
+        const response = await axios.post('https://personafi.onrender.com/api/quiz/api/quiz/submit', userAnswers);
         
         //getting back the response -> personality type of the user
         return response.data;
