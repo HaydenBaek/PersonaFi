@@ -6,7 +6,7 @@ const PersonalityTypeChart = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/quiz/personality-type-counts")
+        axios.get("https://personafi.onrender.com")
 
             .then(response => {
                 // Convert Map<String, Long> to array for Recharts
