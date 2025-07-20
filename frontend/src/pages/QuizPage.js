@@ -15,6 +15,12 @@ function QuizPage() {
     const navigate = useNavigate();
 
 
+    //to display texts that backend is loading, since render takes tiem to boot up
+    const [loading, setLoading] = useState(true);
+
+    
+
+
     useEffect(() => {
         async function fetchQuestions() {
             try {
@@ -25,7 +31,9 @@ function QuizPage() {
                 setQuestions(data);
                 //filling up the userAnswers with undefined for validation
                 setUserAnswers(new Array(data.length).fill(undefined));
-
+                
+                //it has been loaded
+                setLoading(false);
             } catch (error) {
                 console.error('Failed to load quetsions', error)
             }
@@ -75,6 +83,30 @@ function QuizPage() {
     const isQuizComplete = () => {
         return userAnswers.length === questions.length && userAnswers.every(answer => answer !== undefined);
     }
+
+    //displaying texts while waiting
+    if (loading) {
+    return (
+        <div style={{ textAlign: 'center', marginTop: '50px', padding: '20px' }}>
+            <h2>The server is starting up</h2>
+            <p>The backend may take a moment to wake up. Thank you for your patience.</p>
+            <p>
+                While you wait, feel free to explore my 
+                {' '}
+                <a href="https://www.youtube.com/channel/UCzemOcCiCXHzQ6COYkV3BCA" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   style={{ color: '#1E3A8A', fontWeight: 'bold' }}>
+                    YouTube channel
+                </a>
+                {' '}
+                for other demo projects and videos.
+            </p>
+            <p>If nothing loads after a minute or two, please refresh the page.</p>
+        </div>
+    );
+}
+
 
 
 
