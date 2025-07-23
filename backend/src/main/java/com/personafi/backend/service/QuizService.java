@@ -22,6 +22,9 @@ public class QuizService {
     // This method will get the list of answers user submitted and output the
     // personality type
     public PersonalityType calculateResult(List<String> userAnswers) {
+        if (userAnswers == null || userAnswers.isEmpty()) {
+            throw new IllegalArgumentException("Answers list cannot be null or empty");
+        }
 
         Map<String, Integer> scoreMap = new HashMap<>();
 
