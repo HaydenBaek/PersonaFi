@@ -4,7 +4,7 @@
 
 ## Live Demo
 
-- Website: [https://personafi.vercel.app](https://personafi.vercel.app)
+- Website: [https://personafi.vercel.app](https://persona-fi.vercel.app)
 - Demo Video: [Watch on YouTube](https://youtu.be/NtS-QbLqOVE)
 
 ## Tech Stack
