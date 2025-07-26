@@ -4,9 +4,9 @@
 
 ## Live Demo
 
-- Website: [https://personafi.vercel.app](https://persona-fi.vercel.app)
+- Website: [PersonaFi](https://persona-fi.vercel.app)
 - Demo Video: [Watch on YouTube](https://youtu.be/NtS-QbLqOVE)
-- Study Notes: [https://docs.google.com/document/d/1EnRrAfGMhoHIYLD4Pic5UD2CjWdu6EEufabd6LWMuZc/edit?usp=sharing]
+- Study Notes: [Notes](https://docs.google.com/document/d/1EnRrAfGMhoHIYLD4Pic5UD2CjWdu6EEufabd6LWMuZc/edit?usp=sharing)
 
 ## Tech Stack
 
